@@ -1,5 +1,7 @@
 ---
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -36,6 +38,18 @@ library(raster)
 for (ilayer in 3:14) {
   plotRGB(listmap(layer = ilayer))
 }
+```
+
+
+```{r thenut}
+ex <- c(16173799 + c(0, 2000), -4978125 + c(-500, 1500))
+r <- raster(extent(ex), nrows = 1024, ncols = 1024, crs = "EPSG:3857")
+plotRGB(listmap(r, layer = 4))
+plotRGB(listmap(r, layer = 6))
+plotRGB(listmap(r, layer = 13))
+
+
+print(listmap:::layers)
 ```
 
 

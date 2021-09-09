@@ -50,9 +50,12 @@ listmap <- function(x, layer = "Topographic", band = 1:3, resample = "bilinear")
     ex <- c(15948203, 16639980, -5520011, -4759057)
     x1 <- raster::raster(raster::extent(ex), nrows = 1024, ncols = 1024, crs = "EPSG:3857")
     x1[] <- NA_integer_
-    x <- raster::brick(list(x1, x1, x1))
 
+
+  } else {
+    x1 <- x
   }
+  x <- raster::brick(list(x1, x1, x1))
   src <- sprintf(template, layer)
   v <- vapour::vapour_warp_raster(src,
                              projection = raster::projection(x), dimension = dim(x)[2:1], extent = ex, band = band, band_output_type = "Int32", resample = resample)

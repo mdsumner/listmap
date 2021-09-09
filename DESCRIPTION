@@ -1,12 +1,13 @@
 Package: listmap
-Title: What the Package Does (One Line, Title Case)
+Title: Get Imagery Data from TheList
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Michael D.",
            family = "Sumner",
            role = c("aut", "cre"),
            email = "mdsumner@gmail.com")
-Description: What the package does (one paragraph).
+Description: Read data from the Tasmanian 'TheList' server. Various layers are
+ available, read from the 'XYZ' tile server, using 'GDAL' to target any grid. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 Language: es
@@ -15,3 +16,5 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 URL: https://github.com/mdsumner/listmap
 BugReports: https://github.com/mdsumner/listmap/issues
+Imports: 
+    raster
