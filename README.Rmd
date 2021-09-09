@@ -1,0 +1,43 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# listmap
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of listmap is to get thelist imagery. 
+
+## Installation
+
+You can install ...
+
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(listmap)
+library(raster)
+for (ilayer in 3:14) {
+  plotRGB(listmap(layer = ilayer))
+}
+```
+
+
+## Code of Conduct
+
+Please note that the listmap project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
